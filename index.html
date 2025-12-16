@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Passion: Switzerland</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- On-page anchor target -->
+  <a id="top"></a>
+
+
+<a 
+  href="file:///Users/willlarson/Desktop/startbootstrap-clean-blog-gh-pages/index.html" 
+  class="button-link"
+  target="_blank"
+>
+  Visit My Bootstrap Website
+</a>
+
+  <div class="hero">
+    <h1>Why I Love Switzerland</h1>
+    <p>A place that shaped my love for travel, nature, and adventure.</p>
+    <a href="#explore">Jump to Exploring Switzerland ↓</a>
+  </div>
+  
+
+  <div class="content">
+    <h2>What Makes Switzerland Special</h2>
+
+    <!-- Ordered list with embedded unordered list -->
+    <ol>
+      <li>Stunning Landscapes
+        <ul>
+          <li>The Alps</li>
+          <li>Crystal-clear lakes</li>
+          <li>Mountain villages</li>
+        </ul>
+      </li>
+      <li>Outdoor Lifestyle
+        <ul>
+          <li>Skiing</li>
+          <li>Hiking</li>
+          <li>Camping</li>
+        </ul>
+      </li>
+      <li>Culture & Travel
+        <ul>
+          <li>Efficient trains</li>
+          <li>Multilingual culture</li>
+          <li>Historic cities</li>
+        </ul>
+      </li>
+    </ol>
+
+    <!-- Image (not from Bootstrap) -->
+    <img 
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Matterhorn_from_Domhütte_-_2.jpg/1024px-Matterhorn_from_Domhütte_-_2.jpg" 
+      alt="The Matterhorn in Switzerland"
+      class="swiss-image"
+    >
+  </div>
+
+  <div class="content" id="explore">
+    <h2>Exploring Switzerland</h2>
+    <p>
+      From skiing in the Alps to hiking above alpine lakes, Switzerland is built
+      for adventure. Every train ride feels like a postcard.
+    </p>
+
+    <!-- Embedded YouTube video -->
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/linlz7-Pnvw" 
+      title="Switzerland Travel Video"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+    <p><a href="#top">Back to top ↑</a></p>
+  </div>
+
+  <div class="content">
+    <h2>A Map of Switzerland</h2>
+
+    <!-- Embedded Tableau visualization -->
+<div class="tableau-embed">
+  <div
+    class="tableauPlaceholder"
+    id="viz1765899944847"
+    style="position: relative;"
+  >
+    <noscript>
+      <a href="#">
+        <img
+          alt="Map Dashboard"
+          src="https://public.tableau.com/static/images/YS/YSXJZPDGD/1_rss.png"
+          style="border: none;"
+        />
+      </a>
+    </noscript>
+
+    <object class="tableauViz" style="display: none;">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+      <param name="embed_code_version" value="3" />
+      <param name="path" value="shared/YSXJZPDGD" />
+      <param name="toolbar" value="yes" />
+      <param
+        name="static_image"
+        value="https://public.tableau.com/static/images/YS/YSXJZPDGD/1.png"
+      />
+      <param name="animate_transition" value="yes" />
+      <param name="display_static_image" value="yes" />
+      <param name="display_spinner" value="yes" />
+      <param name="display_overlay" value="yes" />
+      <param name="display_count" value="yes" />
+      <param name="language" value="en-US" />
+    </object>
+  </div>
+
+  <script type="text/javascript">
+    var divElement = document.getElementById("viz1765899944847");
+    var vizElement = divElement.getElementsByTagName("object")[0];
+    vizElement.style.width = "100%";
+    vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+    var scriptElement = document.createElement("script");
+    scriptElement.src =
+      "https://public.tableau.com/javascripts/api/viz_v1.js";
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+</div>
+
+</body>
+</html>

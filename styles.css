@@ -1,0 +1,104 @@
+/* General page styling */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background-color: #eef2f6;
+  color: #1e293b;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Hero section */
+.hero {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6b/Swiss_Alps_Jungfrau.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+/* Main heading */
+.hero h1 {
+  font-size: 48px;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+/* Subtitle (the sentence you mentioned) */
+.hero p {
+  font-size: 26px;
+  color: #000000;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+/* Hero links */
+.hero a {
+  font-size: 18px;
+  color: #1d4ed8;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.hero a:hover {
+  text-decoration: underline;
+}
+
+/* Content sections */
+.content {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+/* Section headings */
+h2 {
+  font-size: 32px;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+/* Lists */
+ol, ul {
+  font-size: 18px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Image styling */
+.swiss-image {
+  width: 100%;
+  max-width: 750px;
+  display: block;
+  margin: 30px auto;
+  border-radius: 8px;
+}
+
+/* Tableau embed container */
+.tableau-embed {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.button-link {
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 20px;
+  padding: 12px 22px;
+  background-color: #1d4ed8;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.button-link:hover {
+  background-color: #1e40af;
+  margin-left: 20px;
+}
