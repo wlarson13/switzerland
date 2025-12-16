@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swiss Number Guessing Game</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Swiss_Alps_Jungfrau.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #0f172a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+      text-align: center;
+      max-width: 450px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 42px;
+      color: #d62828; /* Swiss red */
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      font-size: 18px;
+      width: 100px;
+      margin-right: 10px;
+      border-radius: 5px;
+      border: 2px solid #d62828;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: #d62828;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #b71c1c;
+    }
+
+    #feedback {
+      font-size: 22px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    #tries {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🇨🇭 Swiss Number Guessing Game 🇨🇭</h1>
+    <p>Guess a number between 1 and 50 in the Swiss Alps!</p>
+
+    <input type="number" id="guessInput" min="1" max="50" />
+    <button onclick="checkGuess()">Guess!</button>
+
+    <div id="feedback"></div>
+    <div id="tries">Tries: 0</div>
+
+    <button onclick="restartGame()">Restart Game</button>
+  </div>
+
+  <script>
+    let randomNumber = Math.floor(Math.random() * 50) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      const guess = Number(document.getElementById("guessInput").value);
+      const feedback = document.getElementById("feedback");
+      attempts++;
+      document.getElementById("tries").innerText = "Tries: " + attempts;
+
+      if(!guess || guess < 1 || guess > 50) {
+        feedback.innerText = "⚠️ Please enter a number between 1 and 50!";
+        feedback.style.color = "orange";
+      } else if(guess === randomNumber) {
+        feedback.innerText = "🎉 Bravo! You guessed the number in " + attempts + " tries!";
+        feedback.style.color = "green";
+      } else if(guess < randomNumber) {
+        feedback.innerText = "⬆️ Too low! Try a higher number.";
+        feedback.style.color = "#d62828";
+      } else if(guess > randomNumber) {
+        feedback.innerText = "⬇️ Too high! Try a lower number.";
+        feedback.style.color = "#d62828";
+      }
+    }
+
+    function restartGame() {
+      randomNumber = Math.floor(Math.random() * 50) + 1;
+      attempts = 0;
+      document.getElementById("feedback").innerText = "";
+      document.getElementById("tries").innerText = "Tries: 0";
+      document.getElementById("guessInput").value = "";
+    }
+  </script>
+
+</body>
+</html>
