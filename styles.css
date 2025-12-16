@@ -15,6 +15,7 @@ body {
   background-position: center;
   padding: 90px 20px;
   text-align: center;
+  position: relative;
 }
 
 /* Main heading */
@@ -24,7 +25,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Subtitle (the sentence you mentioned) */
+/* Subtitle */
 .hero p {
   font-size: 26px;
   color: #000000;
@@ -33,15 +34,33 @@ body {
 }
 
 /* Hero links */
-.hero a {
+.hero a.hero-link {
   font-size: 18px;
   color: #1d4ed8;
   font-weight: bold;
   text-decoration: none;
 }
 
-.hero a:hover {
+.hero a.hero-link:hover {
   text-decoration: underline;
+}
+
+/* Button styling */
+.button-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 12px 22px;
+  background-color: #1e3a8a;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  position: relative;
+  z-index: 20;
+}
+
+.button-link:hover {
+  background-color: #274cbd;
 }
 
 /* Content sections */
@@ -83,22 +102,4 @@ li {
   display: flex;
   justify-content: center;
   margin-top: 30px;
-}
-
-.button-link {
-  display: inline-block;
-  margin-top: 15px;
-  margin-left: 20px;
-  padding: 12px 22px;
-  background-color: #1d4ed8;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-.button-link:hover {
-  background-color: #1e40af;
-  margin-left: 20px;
 }
