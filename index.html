@@ -81,7 +81,6 @@
   <div class="content">
     <h2>A Map of Switzerland</h2>
 
-    <!-- Embedded Tableau visualization -->
     <div class='tableauPlaceholder' id='viz1765899944847' style='position: relative'>
       <noscript>
         <a href='#'>
@@ -102,16 +101,24 @@
         <param name='language' value='en-US' />
       </object>
     </div>
-    <script type='text/javascript'>
-      var divElement = document.getElementById('viz1765899944847');
-      var vizElement = divElement.getElementsByTagName('object')[0];
-      vizElement.style.width='100%';
-      vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-      var scriptElement = document.createElement('script');
-      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-      vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
+
   </div>
+
+  <!-- Tableau Script -->
+  <script type='text/javascript'>
+    window.onload = function() {
+      var divElement = document.getElementById('viz1765899944847');
+      if(divElement){
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width='100%';
+        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      }
+    };
+  </script>
 
 </body>
 </html>
+
